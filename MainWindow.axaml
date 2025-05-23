@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TestSingletoFrontend.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TestSingletoFrontend.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="TestSingletoFrontend">
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<StackPanel>
+		<TextBlock Text="{Binding LiveConditions.Led1On}" />
+	    <TextBlock Text="{Binding LiveConditions.Led2On}" />
+		<TextBlock Text="{Binding LiveConditions.Led3On}" />
+		<Button Content="Toggle LED1" Command="{Binding ToggleLed1}" />
+		<Button Content="Toggle LED2" Command="{Binding ToggleLed2}" />
+	</StackPanel>
+</Window>

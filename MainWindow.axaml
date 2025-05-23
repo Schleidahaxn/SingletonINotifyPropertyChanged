@@ -15,7 +15,7 @@
 
 	<StackPanel>
 		<TextBlock Text="{Binding LiveConditions.Led1On}" />
-	    <TextBlock Text="{Binding LiveConditions.Led2On}" />
+	    	<TextBlock Text="{Binding LiveConditions.Led2On}" />
 		<TextBlock Text="{Binding LiveConditions.Led3On}" />
 		<Button Content="Toggle LED1" Command="{Binding ToggleLed1}" />
 		<Button Content="Toggle LED2" Command="{Binding ToggleLed2}" />

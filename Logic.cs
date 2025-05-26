@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace ClassLibrary {
     public class Logic {
 
-        public LiveConditions LiveConditions { get; } = LiveConditions.Instance;
+        public LiveConditions LiveConditions => LiveConditions.Instance;
 
         public Logic() {
             LiveConditions.PropertyChanged += LiveConditions_PropertyChanged;

@@ -14,7 +14,6 @@ namespace ClassLibrary {
         private void OnPropertyChanged([CallerMemberName] string? propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-        // Beispiel-Eigenschaften
         private bool _buttonClicked;
         public bool ButtonClicked {
             get => _buttonClicked;
